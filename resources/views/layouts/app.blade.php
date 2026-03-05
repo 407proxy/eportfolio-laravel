@@ -14,7 +14,7 @@
             font-weight: 100 900;
             font-style: normal;
         }
-        body { font-family: 'Instrument Sans', sans-serif; }
+        body { font-family: 'Instrument Sans', sans-serif; background-color: #070707; }
     </style>
 </head>
 <body>
