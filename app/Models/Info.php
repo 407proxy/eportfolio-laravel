@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Info extends Model
 {
-    protected $fillable = ['name', 'university', 'course', 'titles'];
+    protected $fillable = ['name', 'subheader', 'titles', 'image'];
     protected $casts = ['titles' => 'array'];
 }

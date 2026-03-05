@@ -13,21 +13,42 @@
         .hero-wrap { padding: 10%; }
         .hero-content { width: 50%; }
     }
+
+    #rotating-title {
+        transition: opacity 0.3s ease;
+    }
 </style>
 
 <div class="d-flex flex-column min-vh-100 text-white hero-wrap justify-content-center">
     <div class="hero-content">
 
-        <img src="{{ asset('logo.png') }}" alt="Logo" width="52" class="mb-4">
+        <img src="{{ asset($info->image) }}" alt="Logo" width="52" class="mb-4">
 
         <div class="mb-4">
-            <h1 class="display-4 fw-normal lh-1 mb-3">Hey, I'm Dane*</h1>
+            <h1 class="display-4 fw-normal lh-1 mb-3">{{ $info->name }}</h1>
             <p class="text-white-50 small mb-0">
-                Defining how brands grow, expand, and express themselves across modern media.
+                {{ $info->subheader }}
             </p>
         </div>
 
-        <p class="text-white-50 mb-0" style="font-size:0.72rem">*Champion sa Statistics</p>
+        <p class="text-white-50 mb-0" style="font-size:0.72rem">
+            *<span id="rotating-title">{{ $info->titles[0] }}</span>
+        </p>
+
+        <script>
+            const titles = @json($info->titles);
+            let index = 0;
+            const el = document.getElementById('rotating-title');
+
+            setInterval(() => {
+                index = (index + 1) % titles.length;
+                el.style.opacity = 0;
+                setTimeout(() => {
+                    el.textContent = titles[index];
+                    el.style.opacity = 1;
+                }, 300);
+            }, 4000);
+        </script>
 
     </div>
 

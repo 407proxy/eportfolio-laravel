@@ -15,10 +15,10 @@ class InfoSeeder extends Seeder
     public function run(): void
     {
         Info::create([
-            'name'       => 'Josh Dane Labs',
-            'university' => 'University of St. La Salle',
-            'course'     => 'BS Computer Science',
-            'titles'     => ['Creative Director', 'Graphic Designer', 'UI/UX', 'Data Scientist'],
+            'name'      => "Hey, I'm Dane*",
+            'subheader' => 'Defining how brands grow, expand, and express themselves across modern media.',
+            'titles'    => ['Champion sa Statistics', 'Developer', 'Designer'],
+            'image'     => 'assets/jd-logo.png',
         ]);
     }
 }
