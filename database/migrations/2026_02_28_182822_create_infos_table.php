@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('infos', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('university');
-            $table->string('course');
-            $table->json('titles'); // stored as JSON array
+            $table->string('subheader');   // ← add this
+            $table->json('titles');
+            $table->string('image')->nullable(); // ← add this
             $table->timestamps();
         });
     }
