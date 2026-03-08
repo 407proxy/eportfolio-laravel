@@ -3,7 +3,6 @@
 @section('content')
 
 <style>
-    body { background-color: #0a0a0a; }
     .display-4 { font-size: clamp(2.6rem, 10vw, 3.4rem); }
 
     #rotating-title {
@@ -22,25 +21,41 @@
 
 </style>
 
-<div class="min-vh-100 text-white d-flex align-items-center px-4 px-md-5 ps-md-5" style="position: relative; z-index: 3;">
+<div class="min-vh-100 text-white d-flex align-items-center px-4 px-md-5 ps-md-5" 
+style="position: relative; z-index: 3;">
     <div class="row w-100">
-        <div class="col-12 col-md-6 ps-5" style="padding-left: 8% !important;">
+        <div class="col-12 col-md-5 ps-5" style="padding-left: 8% !important;">
 
-            <img src="{{ asset($info->image) }}" alt="Logo" width="52" class="mb-4">
+            {{-- Logo: increased width --}}
+            <img src="{{ asset($info->image) }}" alt="Logo" width="40" class="mb-4">
+
+            <div class="mt-5"></div>
 
             <div class="mb-4">
-                <h1 class="display-4 fw-normal lh-1 mb-3">{{ $info->name }}</h1>
-                <p class="text-white-50 small mb-0">{{ $info->subheader }}</p>
+                <h1 class="text-white mb-0" style="font-size: clamp(1.618rem, 2.43vw, 2.1rem);">
+                    {{ $info->name }}</h1>
+                <div class="mt-2"></div>
+
+                <p class="text-white mb-0" style="font-size: clamp(1rem, 1.5vw, 1.3rem);">
+                    {{ $info->subheader }}</p>
             </div>
 
-            <p class="text-white-50 mb-0" style="font-size:0.72rem">
+            <a href="{{ route('projects') }}" 
+            class="text-white mt-2 d-inline-block"
+            style="font-size: clamp(1rem, 1.5vw, 1.3rem); text-decoration: underline; text-underline-offset: 6px;">
+                → See My Work
+            </a>
+
+            <div class="mt-5"></div>
+
+            <p class="text-white-70 mb-0" style="font-size: 0.9rem">
                 *<span id="rotating-title">{{ $info->titles[0] }}</span>
             </p>
 
         </div>
     </div>
 
-    {{-- Grid: top of screen, full width --}}
+    {{-- Grid --}}
     <img src="{{ asset('assets/grid.png') }}"
         style="
             position: fixed;
@@ -52,7 +67,7 @@
             opacity: 1;
         ">
 
-    {{-- Circle gradient: behind the wave --}}
+    {{-- Circle gradient --}}
     <img src="{{ asset('assets/circle-gradient.png') }}" class="bg-circle"
         style="
             position: fixed;
@@ -62,7 +77,8 @@
             z-index: 1;
             pointer-events: none;
         ">
-
+    
+    {{-- Wave --}}
     <img src="{{ asset('assets/wave.png') }}"
     style="
         position: fixed;

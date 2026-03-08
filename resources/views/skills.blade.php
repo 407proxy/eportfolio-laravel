@@ -2,6 +2,8 @@
 
 @section('content')
 
+    @include('partials.navbar')
+
     <a href="{{ route('home') }}">Home</a> ...
 
     <table>

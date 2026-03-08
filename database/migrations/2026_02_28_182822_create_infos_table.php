@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('infos', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('subheader');   // ← add this
+            $table->string('subheader'); 
             $table->json('titles');
-            $table->string('image')->nullable(); // ← add this
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
