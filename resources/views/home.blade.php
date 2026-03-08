@@ -21,20 +21,23 @@
 
 </style>
 
-<div class="min-vh-100 text-white d-flex align-items-center px-4 px-md-5 ps-md-5" style="position: relative; z-index: 3;">
+<div class="min-vh-100 text-white d-flex align-items-center px-4 px-md-5 ps-md-5" 
+style="position: relative; z-index: 3;">
     <div class="row w-100">
-        <div class="col-12 col-md-6 ps-5" style="padding-left: 8% !important;">
+        <div class="col-12 col-md-5 ps-5" style="padding-left: 8% !important;">
 
             {{-- Logo: increased width --}}
-            <img src="{{ asset($info->image) }}" alt="Logo" width="60" class="mb-4">
+            <img src="{{ asset($info->image) }}" alt="Logo" width="40" class="mb-4">
 
             <div class="mt-5"></div>
 
             <div class="mb-4">
-                <h1 class="text-white mb-0" style="font-size: clamp(1.618rem, 2.43vw, 2.1rem);">{{ $info->name }}</h1>
+                <h1 class="text-white mb-0" style="font-size: clamp(1.618rem, 2.43vw, 2.1rem);">
+                    {{ $info->name }}</h1>
                 <div class="mt-2"></div>
 
-                <p class="text-white mb-0" style="font-size: clamp(1rem, 1.5vw, 1.3rem);">{{ $info->subheader }}</p>
+                <p class="text-white mb-0" style="font-size: clamp(1rem, 1.5vw, 1.3rem);">
+                    {{ $info->subheader }}</p>
             </div>
 
             <a href="{{ route('projects') }}" 

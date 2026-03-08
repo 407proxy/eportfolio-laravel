@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div style="background:#000; min-height:100vh; color:#fff; font-family:'Inter',sans-serif; padding: 2rem;">
+
+    @include('partials.navbar')
+    <div style="background:#000; min-height:100vh; color:#fff; font-family:'Inter',sans-serif; padding: 2rem;">
 
     {{-- Top Right: Get in touch --}}
     <div class="d-flex justify-content-end mb-4">
