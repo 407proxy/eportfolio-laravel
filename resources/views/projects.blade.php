@@ -58,7 +58,7 @@
         </div>
 
         @foreach($projects as $project)
-            <div class="container pb-5">
+            <div class="container pb-5 px-3 px-md-0">
                 <div class="row">
 
                     <div class="col-md-2"></div>
@@ -66,7 +66,7 @@
                     <div class="col-md-8">
                         <div class="d-flex align-items-start gap-3">
 
-                            <div class="d-flex flex-row align-items-center gap-2" style="padding-top: 4px; min-width: 100px;">
+                            <div class="d-none d-md-flex flex-row align-items-center gap-2" style="padding-top: 4px; min-width: 100px;">
                                 <span style="color: rgba(255,255,255,0.75); font-size: 13px; white-space: nowrap;">{{ $project->year }}</span>
                                 <span style="color: rgba(255,255,255,0.75); font-size: 16px;">◉</span>
                             </div>
@@ -83,6 +83,10 @@
                                 <img src="{{ asset('images/project.png') }}" alt="Project" style="width: 100%; height: 300px; object-fit: cover;">
 
                                 <div style="padding: 20px;">
+                                    <div class="d-flex d-md-none align-items-center gap-2 mb-2">
+                                        <span style="color: rgba(255,255,255,0.75); font-size: 13px;">{{ $project->year }}</span>
+                                        <span style="color: rgba(255,255,255,0.75); font-size: 16px;">◉</span>
+                                    </div>
                                     <h3 style="color: #ffffff; font-size: 28px; font-weight: 700; margin: 0 0 16px;">{{ $project->projectname }}</h3>
                                     <hr style="border-color: rgba(255,255,255,0.15); margin: 0 0 16px;">
                                     <p style="color: rgba(255,255,255,0.75); font-size: 15px; line-height: 1.6; margin: 0 0 16px;">
