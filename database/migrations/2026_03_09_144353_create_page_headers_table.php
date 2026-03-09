@@ -11,12 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('contacts', function (Blueprint $table) {
+        Schema::create('page_headers', function (Blueprint $table) {
             $table->id();
-            $table->string('email');
-            $table->string('github');
-            $table->string('linkedin');
-            $table->string('behance');
+            $table->string('page')->unique();
+            $table->string('header');
+            $table->string('subheader')->nullable();
+            $table->string('updated_date')->nullable();
+            $table->string('cta_header')->nullable();
+            $table->text('cta_subheader')->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('contacts');
+        Schema::dropIfExists('page_headers');
     }
 };
