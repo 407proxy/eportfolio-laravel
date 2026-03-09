@@ -17,7 +17,16 @@ class InfoSeeder extends Seeder
         Info::create([
             'name'      => "Hey, I'm Dane*",
             'subheader' => 'Defining how brands grow, expand, and express themselves across modern media.',
-            'titles'    => ['Champion sa Statistics', 'Developer', 'Designer'],
+            'titles' => [
+                'UI/UX Designer',
+                'Frontend Developer',
+                'Brand Identity Designer',
+                'Data Scientist',
+                'Visual Storyteller',
+                'Creative Technologist',
+                'Community-Driven Builder',
+                'Full Stack Developer',
+            ],
             'image'     => 'assets/jd-logo.png',
         ]);
     }

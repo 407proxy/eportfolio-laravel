@@ -3,16 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Contact;
 use App\Models\Info;
 use App\Models\Skill;
-use App\Models\Project;
-use App\Models\Experience;
+use App\Models\PageHeader;
 
 class SkillController extends Controller
 {
     public function index()
     {
-        return view('skills', ['skills' => Skill::all()]);
+        return view('skills', [
+            'info'       => Info::first(),
+            'skills'     => Skill::all(),
+            'pageHeader' => PageHeader::where('page', 'skills')->first(),
+        ]);
     }
 }

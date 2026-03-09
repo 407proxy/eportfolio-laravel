@@ -90,11 +90,6 @@ style="position: relative; z-index: 3;">
         mask-image: linear-gradient(to right, transparent 0%, black 30%);
     ">
 
-    <div class="d-none">
-        <a href="{{ route('skills') }}">Skills</a>
-        <a href="{{ route('projects') }}">Projects</a>
-        <a href="{{ route('experience') }}">Experience</a>
-    </div>
 </div>
 
 <script>

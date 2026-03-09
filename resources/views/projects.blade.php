@@ -35,22 +35,16 @@
                 <div class="col-md-2"></div>
 
                 <div class="col-md-3">
-                    <h1 style="color: #ffffff; font-size: 30px; font-weight: 700;">Projects</h1>
-                    <p style="color: #ffffff; font-size: 18px; font-weight: 600;">Last updated March 9, 2026</p>
-                    <p style="color: rgba(255,255,255,0.75); font-size: 12px; line-height: 1.6;">
-                        Learn all about my recent selected projects,
-                        collaborating with regional, national, and
-                        international brands across different fields.
-                    </p>
+                    <h1 style="color: #ffffff; font-size: 30px; font-weight: 700;">{{ $pageHeader->header }}</h1>
+                    <p style="color: #ffffff; font-size: 18px; font-weight: 600;">Last updated {{ $pageHeader->updated_date }}</p>
+                    <p style="color: rgba(255,255,255,0.75); font-size: 12px; line-height: 1.6;">{{ $pageHeader->subheader }}</p>
                 </div>
 
                 <div class="col-md-2"></div>
 
                 <div class="col-md-3">
-                    <h2 style="color: #ffffff; font-size: 18px; font-weight: 700;">Behance Portfolio</h2>
-                    <p style="color: rgba(255,255,255,0.75); font-size: 12px; line-height: 1.6;">
-                        Visit my Behance portfolio for indepth balabla
-                    </p>
+                    <h2 style="color: #ffffff; font-size: 18px; font-weight: 700;">{{ $pageHeader->cta_header }}</h2>
+                    <p style="color: rgba(255,255,255,0.75); font-size: 12px; line-height: 1.6;">{{ $pageHeader->cta_subheader }}</p>
                 </div>
 
                 <div class="col-md-2"></div>
@@ -80,7 +74,6 @@
                                 backdrop-filter: blur(20px);
                                 -webkit-backdrop-filter: blur(20px);
                             ">
-                                <img src="{{ asset('images/project.png') }}" alt="Project" style="width: 100%; height: 300px; object-fit: cover;">
 
                                 <div style="padding: 20px;">
                                     <div class="d-flex d-md-none align-items-center gap-2 mb-2">

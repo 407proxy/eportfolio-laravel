@@ -13,8 +13,12 @@ class ContactSeeder extends Seeder
      * Run the database seeds.
      */
     public function run(): void
-    {
-        Contact::create(['platform' => 'GitHub', 'contact' => 'github.com/407proxy']);
-        Contact::create(['platform' => 'Email',  'contact' => 'labistrejoshdane@email.com']);
-    }
+{
+    Contact::create([
+        'email'    => 'labistrejoshdane@email.com',
+        'github'   => 'https://github.com/407proxy',
+        'linkedin' => 'https://linkedin.com/in/yourname',
+        'behance'  => 'https://behance.net/yourname',
+    ]);
+}
 }

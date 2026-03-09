@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
             ProjectSeeder::class,
             ExperienceSeeder::class,
             ContactSeeder::class,
+            PageHeaderSeeder::class,
         ]);
     }
 }
