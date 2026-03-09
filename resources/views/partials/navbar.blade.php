@@ -38,7 +38,6 @@
         justify-content: space-between;
     ">
 
-        {{-- Logo Section --}}
         <div class="d-flex align-items-center gap-2">
             <img src="{{ asset('assets/jd-logo.png') }}" alt="Logo" width="28" style="object-fit: contain;">
             <span class="text-white" style="font-size: 24px; font-weight: 600; letter-spacing: -0.2px;">
@@ -46,7 +45,6 @@
             </span>
         </div>
 
-        {{-- Navigation Links --}}
         <div class="d-flex align-items-center" style="gap: 36px;">
             <a href="{{ route('projects') }}" class="nav-link-item text-decoration-none"
                 style="color: rgba(255, 255, 255, 0.75); font-size: 15px; font-weight: 500;">

@@ -4,13 +4,96 @@
 
     @include('partials.navbar')
 
-    <a href="{{ route('home') }}">Home</a> ...
+    <div style="
+        position: fixed;
+        bottom: -52%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        z-index: 0;
+        pointer-events: none;
+        opacity: 0.5;
+    ">
+        <img src="{{ asset('assets/wave2.png') }}" alt="" style="width: 100%; display: block;">
+    </div>
 
-    <table>
-        <tr><th>Skill</th></tr>
-        @foreach($skills as $skill)
-            <tr><td>{{ $skill->name }}</td></tr>
-        @endforeach
-    </table>
+    <div style="
+        position: fixed;
+        top: -5%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        z-index: 1;
+        pointer-events: none;
+    ">
+        <img src="{{ asset('assets/skills-gradient.png') }}" alt="" style="width: 100%; display: block;">
+    </div>
+
+    <div style="position: relative; z-index: 2;">
+
+        {{-- Header Section --}}
+        <div class="container py-5" style="padding-top: 160px !important;">
+            <div class="row align-items-center">
+                <div class="col-md-2"></div>
+
+                <div class="col-md-3">
+                    <h1 style="color: #ffffff; font-size: 30px; font-weight: 700;">Skills</h1>
+                    <p style="color: #ffffff; font-size: 18px; font-weight: 600;">Last updated March 9, 2026</p>
+                    <p style="color: rgba(255,255,255,0.75); font-size: 12px; line-height: 1.6;">
+                        Learn all about my recent selected projects,
+                        collaborating with regional, national, and
+                        international brands across different fields.
+                    </p>
+                </div>
+
+                <div class="col-md-2"></div>
+
+                <div class="col-md-3">
+                    <h2 style="color: #ffffff; font-size: 18px; font-weight: 700;">Dev & Design</h2>
+                    <p style="color: rgba(255,255,255,0.75); font-size: 12px; line-height: 1.6;">
+                        Visit my Behance portfolio for indepth balabla
+                    </p>
+                </div>
+
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+
+        {{-- Skills Grid --}}
+        <div class="container pb-5">
+            <div class="row">
+
+                <div class="col-md-2"></div>
+
+                <div class="col-md-8">
+                    <div class="row g-3">
+
+                        @foreach($skills as $skill)
+                        <div class="col-md-6">
+                            <div style="
+                                border: 1px solid rgba(255,255,255,0.15);
+                                border-radius: 20px;
+                                padding: 24px;
+                                height: 100%;
+                                background-color: rgba(66, 66, 66, 0.13);
+                                backdrop-filter: blur(20px);
+                                -webkit-backdrop-filter: blur(20px);
+                            ">
+                                <img src="{{ asset('assets/' . $skill->logo) }}" alt="{{ $skill->name }}" style="width: 40px; height: 40px; object-fit: contain; margin-bottom: 16px;">
+                                <h3 style="color: #ffffff; font-size: 18px; font-weight: 600; margin: 0 0 10px;">{{ $skill->name }}</h3>
+                                <p style="color: rgba(255,255,255,0.75); font-size: 14px; line-height: 1.6; margin: 0;">{{ $skill->description }}</p>
+                            </div>
+                        </div>
+                        @endforeach
+
+                    </div>
+                </div>
+
+                <div class="col-md-2"></div>
+
+            </div>
+        </div>
+
+    </div>
 
 @endsection

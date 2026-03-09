@@ -26,7 +26,6 @@ style="position: relative; z-index: 3;">
     <div class="row w-100">
         <div class="col-12 col-md-5 ps-5" style="padding-left: 8% !important;">
 
-            {{-- Logo: increased width --}}
             <img src="{{ asset($info->image) }}" alt="Logo" width="40" class="mb-4">
 
             <div class="mt-5"></div>
