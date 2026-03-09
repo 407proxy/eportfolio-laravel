@@ -15,6 +15,54 @@
         background-color: rgba(255, 255, 255, 0.08) !important;
         border-color: rgba(255, 255, 255, 0.5) !important;
     }
+
+    @media (max-width: 480px) {
+        .nav-link-item {
+            font-size: 12px !important;
+        }
+
+        .nav-links-group {
+            gap: 16px !important;
+        }
+
+        .contact-btn {
+            font-size: 12px !important;
+            padding: 6px 12px !important;
+        }
+
+        .nav-inner {
+            padding: 10px 14px !important;
+        }
+    }
+
+    @media (max-width: 520px) {
+        .nav-logo-text {
+            display: none !important;
+        }
+
+        .nav-link-item {
+            font-size: 12px !important;
+        }
+
+        .nav-links-group {
+            gap: 14px !important;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .nav-link-item {
+            font-size: 11px !important;
+        }
+
+        .nav-links-group {
+            gap: 10px !important;
+        }
+
+        .contact-btn {
+            font-size: 11px !important;
+            padding: 5px 10px !important;
+        }
+    }
 </style>
 
 <nav style="
@@ -26,7 +74,7 @@
     max-width: 900px;
     z-index: 1000;
 ">
-    <div style="
+    <div class="nav-inner" style="
         background-color: rgba(217, 217, 217, 0.10);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
@@ -39,13 +87,13 @@
     ">
 
         <div class="d-flex align-items-center gap-2">
-            <img src="{{ asset('assets/jd-logo.png') }}" alt="Logo" width="28" style="object-fit: contain;">
-            <span class="text-white" style="font-size: 24px; font-weight: 600; letter-spacing: -0.2px;">
+            <img class="nav-logo-img" src="{{ asset('assets/jd-logo.png') }}" alt="Logo" width="28" style="object-fit: contain;">
+            <span class="nav-logo-text text-white" style="font-size: 24px; font-weight: 600; letter-spacing: -0.2px;">
                 Dane
             </span>
         </div>
 
-        <div class="d-flex align-items-center" style="gap: 36px;">
+        <div class="nav-links-group d-flex align-items-center" style="gap: 36px;">
             <a href="{{ route('projects') }}" class="nav-link-item text-decoration-none"
                 style="color: rgba(255, 255, 255, 0.75); font-size: 15px; font-weight: 500;">
                 Projects
@@ -60,7 +108,6 @@
             </a>
         </div>
 
-        {{-- Contact Button --}}
         <a href="{{ route('contact') }}" class="contact-btn text-white text-decoration-none"
             style="
                 font-size: 15px;
@@ -68,6 +115,7 @@
                 border: 1px solid rgba(255, 255, 255, 0.3);
                 border-radius: 999px;
                 padding: 8px 20px;
+                white-space: nowrap;
             ">
             Contact
         </a>
