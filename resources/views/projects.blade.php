@@ -83,8 +83,7 @@
                                     <h3 style="color: #ffffff; font-size: 28px; font-weight: 700; margin: 0 0 16px;">{{ $project->projectname }}</h3>
                                     <hr style="border-color: rgba(255,255,255,0.15); margin: 0 0 16px;">
                                     <p style="color: rgba(255,255,255,0.75); font-size: 15px; line-height: 1.6; margin: 0 0 16px;">
-                                        Learn all about my recent selected projects, collaborating with regional, national,
-                                        and international brands across different fields.
+                                        {{ $project->description }}
                                     </p>
                                     <hr style="border-color: rgba(255,255,255,0.15); margin: 0 0 16px;">
                                     <p style="color: rgba(255,255,255,0.75); font-size: 15px; margin: 0;">{{ $project->organization }}</p>
